@@ -1,0 +1,10 @@
+---
+# tasks file for user-test
+- name: Manage system users
+  include_tasks: system.yml
+  when: users_system is defined and users_system|length > 0
+  tags:
+    - users
+    - users_system
+    - users_system_group
+    - users_system_user
